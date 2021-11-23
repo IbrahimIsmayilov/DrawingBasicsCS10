@@ -46,8 +46,24 @@ ctx.lineTo(600, 300);
 ctx.closePath(); // Go back to start of path
 ctx.fill(); // Draw the specified path
 
-// CIRCLES
+// CIRCLES / ARCS
 ctx.lineWidth = 5;
 ctx.strokeStyle = "#0000FF";
+ctx.beginPath();
+ctx.arc(100, 500, 50, 0, 2 * Math.PI); 
+ctx.stroke();
 
-// left off at 12:30 at the second drawing vid
+ctx.fillStyle = "green";
+ctx.beginPath();
+ctx.arc(250, 500, 30, 0, 2 * Math.PI); 
+ctx.fill();
+
+ctx.fillStyle = "#FFFF00";
+ctx.beginPath();
+ctx.arc(250, 500, 20, 0, 2 * Math.PI); 
+ctx.fill();
+
+// left off at 1:58 on drawing basic 3 video
+
+
+
