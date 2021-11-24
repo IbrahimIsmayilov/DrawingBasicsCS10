@@ -6,6 +6,8 @@ let ctx = cnv.getContext("2d");
 cnv.width = 800;
 cnv.height = 600;
 
+// Store Images In Variables
+let htmlLogoImg = document.getElementById("html-logo-img");
 
 // Drawing stuff using the graphics context (ctx)
 
@@ -40,8 +42,8 @@ ctx.stroke(); // Draw the specified path
 // DRAW POLYGON
 ctx.fillStyle = "cyan";
 ctx.beginPath();
-ctx.moveTo(500, 400);
-ctx.lineTo(700, 350);
+ctx.moveTo(500, 400); // Set line location
+ctx.lineTo(700, 350); // Draw a line from current location to (700, 150)
 ctx.lineTo(600, 300);
 ctx.closePath(); // Go back to start of path
 ctx.fill(); // Draw the specified path
@@ -50,20 +52,21 @@ ctx.fill(); // Draw the specified path
 ctx.lineWidth = 5;
 ctx.strokeStyle = "#0000FF";
 ctx.beginPath();
-ctx.arc(100, 500, 50, 0, 2 * Math.PI); 
+ctx.arc(100, 500, 50, 0, 2 * Math.PI); // Circle (0 to 2*PI) with center (100, 500) and radius 50
 ctx.stroke();
 
 ctx.fillStyle = "green";
 ctx.beginPath();
-ctx.arc(250, 500, 30, 0, 2 * Math.PI); 
+ctx.arc(250, 500, 30, 0, 2 * Math.PI); // Circle (0 to 2*PI) with center (250, 500) and radius 30
 ctx.fill();
 
 ctx.fillStyle = "#FFFF00";
 ctx.beginPath();
-ctx.arc(250, 500, 20, 0, 2 * Math.PI); 
+ctx.arc(250, 500, 20, 0, Math.PI); // Half circle (0 to PI) with center (250, 500) and radius 20
 ctx.fill();
 
-// left off at 1:58 on drawing basic 3 video
-
+// DRAW IMAGES
+ctx.drawImage(htmlLogoImg, 200, 200); // Draw image with top left corner of (200, 200)
+ctx.drawImage(htmlLogoImg, 200, 350, 50, 50); // Draw image with top left corner of (200, 350) scale to 50 x 50
 
 
